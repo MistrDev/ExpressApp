@@ -8,8 +8,14 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'hi') {
+  if (msg.content === '!hi') {
     msg.reply('Sup bruh!');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '!where is cory?') {
+    msg.reply('In your moms kitchen proably');
   }
 });
 
