@@ -7,5 +7,11 @@ client.on('ready', () => {
   console.log(`Logged in!`);
 });
 
+client.on('message', msg => {
+  if (msg.content === 'hi') {
+    msg.reply('Sup bruh!');
+  }
+});
+
 
 client.login(process.env.DISCORD_TOK);
