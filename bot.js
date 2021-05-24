@@ -15,9 +15,17 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!where is cory?') {
-    msg.reply('In your moms kitchen proably');
+    msg.reply('In your moms kitchen prolly');
   }
 });
+
+client.on('message', msg => {
+  if (msg.content === '!mod-me') {
+    msg.member.roles.add('846396573193207849');
+  }
+});
+
+
 
 
 client.login(process.env.DISCORD_TOK);
