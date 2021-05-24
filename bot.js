@@ -19,6 +19,13 @@ client.on('message', msg => {
   }
 });
 
+
+client.on('message', msg => {
+  if (msg.content === '!ape') {
+    msg.reply('AMC TO THE MF MOON!');
+  }
+});
+
 client.on('message', msg => {
   if (msg.content === '!mod-me') {
     msg.member.roles.add('846396573193207849');
