@@ -2,7 +2,10 @@ require("dotenv").config()
 
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({
+  partials: ["MESSAGE"]
+}
+);
 
 
 client.on('ready', () => {
@@ -54,15 +57,23 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!eric') {
-    msg.channel.send(`Eric likes to sniff hambos butt!`);
+    msg.channel.send('Eric likes to sniff hambos butt!');
+  }
+});
+
+client.on('messageDelete', msg => {
+   msg.reply('Woahhhh, stop deleting messages bruh! Jarvis no likey..');
+});
+
+client.on('message', msg => {
+  if (msg.content === 'I love jarvis') {
+    msg.react('😍');
   }
 });
 
 client.on('message', message => {
   if (message.content === '!balloon') {
-    // Create the attachment using MessageAttachment
     const attachment = new MessageAttachment('https://www.zebrapen.com/wp-content/themes/zebra/js/fullPage/examples/imgs/bg5.jpg');
-    // Send the attachment in the message channel with a content
     message.channel.send(`${message.author},`, attachment);
   }
 });
