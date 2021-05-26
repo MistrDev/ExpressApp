@@ -27,7 +27,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!seth') {
-    msg.reply('My name is cort, Im the leader of this place..');
+    msg.reply('Hi, my name is corg, Im the leader of this place..');
   }
 });
 
