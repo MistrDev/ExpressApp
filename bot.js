@@ -19,6 +19,18 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '!where is cory?') {
+    msg.reply('In your moms kitchen prolly');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '!seth') {
+    msg.reply('My name is cort, Im the leader of this place..');
+  }
+});
+
 
 client.on('message', msg => {
   if (msg.content === '!ape') {
