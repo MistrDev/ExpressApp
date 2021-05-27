@@ -7,6 +7,7 @@ const client = new Discord.Client({
 }
 );
 
+client.setMaxListeners(Infinity);
 
 client.on('ready', () => {
   console.log(`Logged in!`);
