@@ -79,7 +79,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!join') {
-    msg.channel.send('You think you are better than me Rythm? Oh helllll nah!');
+    msg.channel.send('You think you are better than me Rythm? Ight bet!');
   }
 });
 
