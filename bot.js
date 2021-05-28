@@ -127,6 +127,16 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content === '!linked') {
+    const botInfo = new Discord.MessageEmbed()
+    .setDescription('[To Dads Work](https://www.linkedin.com/in/cory-williams-5672841b0/)')
+    message.channel.send('Here is Mistr Devs LinkedIn! Check out how professional he is.. wow')
+    message.channel.send(botInfo);
+    
+  }
+});
+
 // end bot commands
 
 
