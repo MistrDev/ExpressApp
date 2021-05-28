@@ -7,8 +7,10 @@ const client = new Discord.Client({
 }
 );
 
+//node stuff
 client.setMaxListeners(Infinity);
 
+//
 client.on('ready', () => {
   console.log(`Logged in!`);
 });
@@ -51,6 +53,18 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'Are you working jarvis?') {
+    msg.reply('Yes, I seem to be working correctly. Why do you ask?');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Just making sure jarvis') {
+    msg.reply(`Thank you for making me feel wanted..`);
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === '!mod-me') {
     msg.member.roles.add('790702092863537153');
   }
@@ -58,7 +72,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!eric') {
-    msg.channel.send('Eric likes to sniff hambos butt!');
+    msg.channel.send('Eric loves Jarvis!');
   }
 });
 
