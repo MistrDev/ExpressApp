@@ -12,7 +12,7 @@ client.setMaxListeners(Infinity);
 
 //
 client.on('ready', () => {
-  console.log(`Logged in!`);
+  console.log(`Logged in!` + Discord.version);
 });
 
 // bot commands
@@ -101,6 +101,13 @@ client.on('message', msg => {
 client.on('message', message => {
   if (message.content === '!balloon') {
     const attachment = new MessageAttachment('https://www.zebrapen.com/wp-content/themes/zebra/js/fullPage/examples/imgs/bg5.jpg');
+    message.channel.send(`${message.author},`, attachment);
+  }
+});
+
+client.on('message', message => {
+  if (message.content === '!patrick') {
+    const attachment = new MessageAttachment('');
     message.channel.send(`${message.author},`, attachment);
   }
 });
