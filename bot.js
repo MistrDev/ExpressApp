@@ -12,7 +12,7 @@ client.setMaxListeners(Infinity);
 
 //
 client.on('ready', () => {
-  console.log(`Logged in!` + Discord.version);
+  console.log(`Logged in! `  + Discord.version);
 });
 
 // bot commands
@@ -60,7 +60,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'Just making sure jarvis') {
-    msg.reply(`Thank you for making me feel wanted..`);
+    msg.reply('Thank you for making me feel wanted..');
   }
 });
 
