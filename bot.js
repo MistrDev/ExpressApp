@@ -1,5 +1,6 @@
 require("dotenv").config()
 
+
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client({
@@ -105,12 +106,27 @@ client.on('message', message => {
   }
 });
 
+// link commands
 client.on('message', message => {
-  if (message.content === '!patrick') {
-    const attachment = new MessageAttachment('');
-    message.channel.send(`${message.author},`, attachment);
+  if (message.content === '!creator') {
+    const botInfo = new Discord.MessageEmbed()
+    .setDescription('[To Dads House!](https://www.mistrdev.dev/)')
+    message.channel.send('Here is Mistr Dev, my creator. Check out his website below!')
+    message.channel.send(botInfo);
+    
   }
 });
+
+client.on('message', message => {
+  if (message.content === '!github') {
+    const botInfo = new Discord.MessageEmbed()
+    .setDescription('[To the CODE!](https://github.com/MistrDev)')
+    message.channel.send('Here is Mistr Devs github! Check out his commits to his projects! Is he even human..?')
+    message.channel.send(botInfo);
+    
+  }
+});
+
 // end bot commands
 
 
