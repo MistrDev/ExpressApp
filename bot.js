@@ -55,7 +55,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!bo') {
-    msg.reply('Bo loves jarvis!');
+    msg.channel.send('Bo loves jarvis!');
   }
 });
 
