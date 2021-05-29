@@ -37,7 +37,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!seth') {
-    msg.reply('Hi, my name is Seth, Im the leader of this place..');
+    msg.reply('Oy seth, I hope you have a good one ol chap');
   }
 });
 
