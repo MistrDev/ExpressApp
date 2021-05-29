@@ -132,7 +132,7 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === '!github') {
     const botInfo = new Discord.MessageEmbed()
-    .setDescription('[To the CODE!](https://github.com/MistrDev)')
+    .setDescription('[To Dads Code!](https://github.com/MistrDev)')
     message.channel.send('Here is Mistr Devs github! Check out his commits to his projects! Is he even human..?')
     message.channel.send(botInfo);
     
