@@ -101,6 +101,12 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '!dc') {
+    msg.channel.send('Yeah thats what I thought rythm.. better leave..pussy');
+  }
+});
+
 client.on('messageDelete', msg => {
    msg.reply('Woahhhh, stop deleting messages bruh! Jarvis no likey..');
 });
