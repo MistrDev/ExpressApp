@@ -108,7 +108,7 @@ client.on('message', msg => {
 });
 
 client.on('messageDelete', msg => {
-   msg.reply('Woahhhh, stop deleting messages bruh! Jarvis no likey..');
+   msg.channel.send('Woahhhh, stop deleting messages bruh! Jarvis no likey..');
 });
 
 client.on('message', msg => {
@@ -153,6 +153,11 @@ client.on('message', message => {
     message.channel.send(botInfo);
     
   }
+});
+
+client.on('guildMemberAdd', member => {
+  channel = member.guild.channels.cache.get("845844678657048587");
+  channel.send("Welcome " + member.displayName + "\n Member Count: " + member.guild.memberCount);
 });
 
 // end bot commands
