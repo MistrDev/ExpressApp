@@ -23,6 +23,7 @@ client.on('message', msg => {
   }
 });
 
+
 client.on('message', msg => {
   if (msg.content === '!corg') {
     msg.channel.send('Hi im made of rocks, but dont let that scare you unless your a pair of scissors haha.. little rock, paper, scissors joke for yah');
@@ -121,6 +122,12 @@ client.on('message', message => {
   if (message.content === '!balloon') {
     const attachment = new MessageAttachment('https://www.zebrapen.com/wp-content/themes/zebra/js/fullPage/examples/imgs/bg5.jpg');
     message.channel.send(`${message.author},`, attachment);
+  }
+});
+
+client.on('message', message => {
+  if (message.content === '!what is my avatar?') {
+    message.reply(message.author.displayAvatarURL());
   }
 });
 
