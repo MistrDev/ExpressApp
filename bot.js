@@ -12,12 +12,18 @@ const client = new Discord.Client({
 //node stuff
 client.setMaxListeners(Infinity);
 
-//
 client.on('ready', () => {
   console.log(`Logged in! `  + Discord.version);
 });
 
 // bot commands
+client.on('message', msg => {
+  if (msg.content === '!commands') {
+    const commands = ('-!hi    -!Thanks    -!corg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered')
+    msg.reply(commands);
+  }
+});
+
 client.on('message', msg => {
   if (msg.content === '!hi') {
     msg.reply('Sup bruh!');
@@ -174,7 +180,6 @@ client.on('guildMemberAdd', member => {
 });
 
 // command for the DIG images
-
 client.on('message', async (message) => {
   if (message.content === '!meme-me') {
       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
@@ -183,7 +188,6 @@ client.on('message', async (message) => {
       message.channel.send(attach)
   }
 })
-
 
 client.on('message', async (message) => {
   if (message.content === '!beautiful') {
@@ -194,6 +198,41 @@ client.on('message', async (message) => {
   }
 })
 
+client.on('message', async (message) => {
+  if (message.content === '!rip') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Rip().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
+
+client.on('message', async (message) => {
+  if (message.content === '!trash') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Trash().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
+
+client.on('message', async (message) => {
+  if (message.content === '!triggered') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Triggered().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
+
+client.on('message', async (message) => {
+  if (message.content === '!lisa') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.LisaPresentation().getImage(`Buy AMC.    Thank you, Have a good day.`);
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
 // end bot commands
 
 
