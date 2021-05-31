@@ -233,6 +233,15 @@ client.on('message', async (message) => {
       message.channel.send(attach)
   }
 })
+
+client.on('message', async (message) => {
+  if (message.content === '!invert') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Invert().getImage(avatar);
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
 // end bot commands
 
 
