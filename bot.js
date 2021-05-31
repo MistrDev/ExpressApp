@@ -3,6 +3,7 @@ require("dotenv").config()
 
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
+const DIG = require("discord-image-generation");
 const client = new Discord.Client({
   partials: ["MESSAGE"]
 }
@@ -23,6 +24,11 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '!Thanks') {
+    msg.reply('Any time sunshine!');
+  }
+});
 
 client.on('message', msg => {
   if (msg.content === '!corg') {
@@ -166,6 +172,27 @@ client.on('guildMemberAdd', member => {
   channel = member.guild.channels.cache.get("845844678657048587");
   channel.send("Welcome " + member.displayName + "\n Member Count: " + member.guild.memberCount);
 });
+
+// command for the DIG images
+
+client.on('message', async (message) => {
+  if (message.content === '!meme-me') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Affect().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
+
+
+client.on('message', async (message) => {
+  if (message.content === '!beautiful') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Beautiful().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
 
 // end bot commands
 
