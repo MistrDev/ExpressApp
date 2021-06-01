@@ -4,6 +4,7 @@ require("dotenv").config()
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
 const DIG = require("discord-image-generation");
+const { DiscordTogether } = require('discord-together');
 const client = new Discord.Client({
   partials: ["MESSAGE"]
 }
@@ -11,7 +12,7 @@ const client = new Discord.Client({
 
 //node stuff
 client.setMaxListeners(Infinity);
-
+client.discordTogether = new DiscordTogether(client);
 client.on('ready', () => {
   console.log(`Logged in! `  + Discord.version);
 });
@@ -19,7 +20,7 @@ client.on('ready', () => {
 // bot commands
 client.on('message', msg => {
   if (msg.content === '!commands') {
-    const commands = ('-!hi    -!Thanks    -!corg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered')
+    const commands = ('-!hi    -!Thanks    -!corg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert')
     msg.reply(commands);
   }
 });
@@ -242,8 +243,38 @@ client.on('message', async (message) => {
       message.channel.send(attach)
   }
 })
-// end bot commands
 
+//Discord-together
+client.on('message', async message => {
+  if (message.content === '!youtube') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
+
+client.on('message', async message => {
+  if (message.content === '!poker') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
+
+client.on('message', async message => {
+  if (message.content === '!fishing') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
+// end bot commands
 
 
 client.login(process.env.DISCORD_TOK);
