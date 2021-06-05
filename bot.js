@@ -80,7 +80,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'Are you working jarvis?') {
+  if (msg.content === 'are you working jarvis?') {
     msg.reply('Yes, I seem to be working correctly. Why do you ask?');
   }
 });
