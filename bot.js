@@ -20,7 +20,7 @@ client.on('ready', () => {
 // bot commands
 client.on('message', msg => {
   if (msg.content === '!commands') {
-    const commands = ('-!hi    -!Thanks    -!corg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert      -!poker      -!youtube       -!fishing')
+    const commands = ('-!hi    -!Thanks    -!korg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert      -!poker      -!youtube       -!fishing')
     msg.channel.send(commands);
   }
 });
@@ -38,8 +38,9 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '!corg') {
-    msg.channel.send('Hi im made of rocks, but dont let that scare you unless your a pair of scissors haha.. little rock, paper, scissors joke for yah');
+  if (msg.content === '!korg') {
+    const attachment = new MessageAttachment('https://media.tenor.com/images/8f9e3fa80f0e9529811ee1a732600e9a/tenor.gif');
+    msg.channel.send('Hey, hey, hey. Hey. Take it easy, man. Over here. The pile of rocks waving at you. Here. Yeah, Im actually a thing. Im a being. Allow me to introduce myself. My name is Korg. Im kind of like the leader in here. Im made of rocks, as you can see..' , attachment);
   }
 });
 
@@ -168,7 +169,7 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === '!linked') {
     const botInfo = new Discord.MessageEmbed()
-    .setDescription('[To Dads Work](https://www.linkedin.com/in/cory-williams-5672841b0/)')
+    .setDescription('[To Dads Work!](https://www.linkedin.com/in/cory-williams-5672841b0/)')
     message.channel.send('Here is Mistr Devs LinkedIn! Check out how professional he is.. wow')
     message.channel.send(botInfo);
     
