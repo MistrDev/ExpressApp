@@ -26,7 +26,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '!hi') {
+  if (msg.content === '!hi my names Jarvis!') {
     msg.reply('Sup bruh!');
   }
 });
