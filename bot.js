@@ -185,7 +185,7 @@ client.on('guildMemberAdd', member => {
 
 // command for the DIG images
 client.on('message', async (message) => {
-  if (message.content === '!meme-me') {
+  if (message.content === '!meme') {
       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
       const img = await new DIG.Affect().getImage(avatar)
       const attach = new Discord.MessageAttachment(img, "delete.png");;
