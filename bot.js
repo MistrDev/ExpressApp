@@ -20,7 +20,7 @@ client.on('ready', () => {
 // bot commands
 client.on('message', msg => {
   if (msg.content === '!commands') {
-    const commands = ('-!hi    -!Thanks    -!korg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme-me     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert      -!poker      -!youtube       -!fishing')
+    const commands = ('-!hi    -!Thanks    -!korg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert      -!poker      -!youtube       -!fishing')
     msg.channel.send(commands);
   }
 });
