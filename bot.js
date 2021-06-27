@@ -247,7 +247,7 @@ client.on('message', async (message) => {
   }
 })
 
-//Discord-together
+//Discord-together youtube , poker, fishing
 client.on('message', async message => {
   if (message.content === '!youtube') {
       if(message.member.voice.channel) {
