@@ -1,4 +1,4 @@
 # discordbot
-Discord bot w/ node.js and EJS first time with
+Discord bot w/ node.js, discord.js and EJS
 Object oriented programming(OOP) 
 
