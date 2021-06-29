@@ -5,6 +5,7 @@ const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
 const DIG = require("discord-image-generation");
 const { DiscordTogether } = require('discord-together');
+
 const client = new Discord.Client({
   partials: ["MESSAGE"]
 }
@@ -242,6 +243,15 @@ client.on('message', async (message) => {
   if (message.content === '!invert') {
       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
       const img = await new DIG.Invert().getImage(avatar);
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+})
+
+client.on('message', async (message) => {
+  if (message.content === '!AMC') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Stonk().getImage(avatar)
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
