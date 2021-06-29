@@ -72,7 +72,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!bo') {
-    msg.channel.send('Bo loves jarvis!');
+    msg.channel.send('Bo loves jarvis and Cory, my master!');
   }
 });
 
