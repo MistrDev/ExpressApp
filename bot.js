@@ -257,14 +257,6 @@ client.on('message', async (message) => {
   }
 })
 
-//client.on('message', async (message) => {
- // if (message.content === '!Take bo out') {
-     // const avatar = message.displayAvatarURL({ dynamic: false, format: 'png' });
-     // const img = await new DIG.Delete().getImage('//cdn.discordapp.com/avatars/570023535779643403/cdd2ca63be97896218b6478a7ce7b88a.webp?size=128%22')
-      //const attach = new Discord.MessageAttachment(img);;
-     // message.channel.send(attach)
- // }
-//}) 
 
 //Discord-together youtube , poker, fishing
 client.on('message', async message => {
