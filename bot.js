@@ -1,6 +1,7 @@
 require("dotenv").config()
 
 
+
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
 const DIG = require("discord-image-generation");
@@ -147,6 +148,21 @@ client.on('message', message => {
     message.reply(message.author.displayAvatarURL());
   }
 });
+
+// a command that returns the time of the day
+client.on('message', msg => {
+  if (msg.content === '!time') {
+    const time = new Date();
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const suffix = hours > 12 ? hours - 12 : hours;
+    const strTime = `It is currently ${suffix}:${minutes} ${ampm}`;
+    msg.reply(strTime);
+  }
+});
+
+
 
 // link commands
 client.on('message', message => {
