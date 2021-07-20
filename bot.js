@@ -210,10 +210,6 @@ client.on('message', message => {
   }
 });
 
-client.on('guildMemberAdd', member => {
-  channel = member.guild.channels.cache.get("845844678657048587");
-  channel.send("Welcome " + member.displayName + "\n Member Count: " + member.guild.memberCount);
-});
 
 // command for the DIG images
 client.on('message', async (message) => {
