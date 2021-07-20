@@ -149,18 +149,6 @@ client.on('message', message => {
   }
 });
 
-// a command that returns the time of the day
-client.on('message', msg => {
-  if (msg.content === '!time') {
-    const time = new Date();
-    const hours = time.getHours();
-    const minutes = time.getMinutes();
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    const suffix = hours > 12 ? hours - 12 : hours;
-    const strTime = `It is currently ${suffix}:${minutes} ${ampm}`;
-    msg.reply(strTime);
-  }
-});
 
 // 8ball command
 client.on('message', msg => {
@@ -178,6 +166,16 @@ client.on('message', msg => {
   }
 });
 
+// random joke command
+client.on('message', msg => {
+  if (msg.content === '!joke') {
+    const request = require('request');
+    const fs = require('fs');
+    const path = require('path');
+    const joke = path.join(__dirname, '../jokes.json');
+    const jokes = JSON.parse(fs.readFileSync(joke));
+    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    msg.reply(randomJoke);
 
 // link commands
 client.on('message', message => {
