@@ -166,6 +166,13 @@ client.on('message', msg => {
   }
 });
 
+//coin command
+client.on('message', msg => {
+  if (msg.content === '!coin') {
+    const responses = ['Heads', 'Tails'];
+    msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+  }
+});
 
 
 // link commands
