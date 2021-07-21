@@ -166,16 +166,7 @@ client.on('message', msg => {
   }
 });
 
-// random joke command
-client.on('message', msg => {
-  if (msg.content === '!joke') {
-    const request = require('request');
-    const fs = require('fs');
-    const path = require('path');
-    const joke = path.join(__dirname, '../jokes.json');
-    const jokes = JSON.parse(fs.readFileSync(joke));
-    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
-    msg.reply(randomJoke);
+
 
 // link commands
 client.on('message', message => {
