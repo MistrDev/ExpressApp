@@ -20,12 +20,7 @@ client.on('ready', () => {
 });
 
 // bot commands
-client.on('message', msg => {
-  if (msg.content === '!commands') {
-    const commands = ('-!hi    -!Thanks    -!korg    -!where is cory?    -!seth    -!skin    -!ape    -!bo    -!jess    -!eric    -I love jarvis     -!balloon     -!what is my avatar?    -!github     -!linked      -!creator     -!meme     -!beautiful     -!rip     -!lisa     -!trash     -!triggered     -!invert      -!poker      -!youtube       -!fishing')
-    msg.channel.send(commands);
-  }
-});
+
 
 client.on('message', msg => {
   if (msg.content === '!hi my names Jarvis!') {
@@ -171,6 +166,55 @@ client.on('message', msg => {
   if (msg.content === '!coin') {
     const responses = ['Heads', 'Tails'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+  }
+});
+
+
+//a command with that takes the users data and sends it to the channel
+client.on('message', msg => {
+  if (msg.content === '!Hey') {
+    msg.channel.send(`Hello, ${msg.author.username}`);
+  }
+});
+
+
+
+// make a command that has a full code example
+client.on('message', msg => {
+  if (msg.content === '!code') {
+    msg.channel.send('```js\nconsole.log("Hello, world!");\n```');
+  }
+});
+
+
+// a command that has a full css example  
+client.on('message', msg => {
+  if (msg.content === '!css') {
+    msg.channel.send('```css\nbody {\n  background-color: #f0f0f0;\n}\n```');
+  }
+});
+
+//a html command
+client.on('message', msg => {
+  if (msg.content === '!html') {
+    msg.channel.send('```html\n<html>\n  <head>\n    <title>Hello, world!</title>\n  </head>\n  <body>\n    <h1>Hello, world!</h1>\n  </body>\n</html>\n```');
+  }
+});
+
+
+
+//make a command that list all commands made  
+client.on('message', msg => {
+  if (msg.content === '!commands') {
+    msg.channel.send('```js\n!8ball\n!dice\n!coin\n!hey\n!html\n!css\n!commands\n!join\n!disconnect\n!eric\n!mod-me\n!balloon\n!what is my avatar?\n```');
+  }
+});
+
+
+//make a command that lists all the servers the bot is in
+client.on('message', msg => {
+  if (msg.content === '!servers') {
+    msg.channel.send('```js\n!servers\n```');
   }
 });
 
