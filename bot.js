@@ -211,12 +211,15 @@ client.on('message', msg => {
 });
 
 
-//make a command that lists all the servers the bot is in
+//make a command that hacks the server
 client.on('message', msg => {
-  if (msg.content === '!servers') {
-    msg.channel.send('```js\n!servers\n```');
+  if (msg.content === '!hack') {
+    msg.channel.send('```js\nconsole.log("THIS SERVER IS NOW IN CONTROL BY JARVIS");\n```');
   }
 });
+
+
+
 
 
 
