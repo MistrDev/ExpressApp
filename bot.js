@@ -91,11 +91,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === '!mod-me') {
-    msg.member.roles.add('790702092863537153');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === '!eric') {
