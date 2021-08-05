@@ -1,4 +1,3 @@
 # discordbot
-Discord bot w/ node.js, discord.js and EJS
-Object oriented programming(OOP) 
-
+Discord bot made w/ node.js, discord.js 
+My bots name is Jarvis and he will make you laugh!
