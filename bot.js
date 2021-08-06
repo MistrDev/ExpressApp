@@ -197,7 +197,6 @@ client.on('message', msg => {
 });
 
 
-
 //make a command that list all commands made  
 client.on('message', msg => {
   if (msg.content === '!commands') {
@@ -214,14 +213,6 @@ client.on('message', msg => {
 });
 
 
-
-
-
-
-
-
-
-
 // link commands
 client.on('message', message => {
   if (message.content === '!creator') {
@@ -233,6 +224,7 @@ client.on('message', message => {
   }
 });
 
+
 client.on('message', message => {
   if (message.content === '!github') {
     const botInfo = new Discord.MessageEmbed()
@@ -243,6 +235,7 @@ client.on('message', message => {
   }
 });
 
+
 client.on('message', message => {
   if (message.content === '!linked') {
     const botInfo = new Discord.MessageEmbed()
@@ -252,7 +245,6 @@ client.on('message', message => {
     
   }
 });
-
 
 // command for the DIG images
 client.on('message', async (message) => {
@@ -326,7 +318,6 @@ client.on('message', async (message) => {
       message.channel.send(attach)
   }
 })
-
 
 //Discord-together youtube , poker, fishing
 client.on('message', async message => {
