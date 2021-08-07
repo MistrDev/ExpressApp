@@ -20,8 +20,6 @@ client.on('ready', () => {
 });
 
 // bot commands
-
-
 client.on('message', msg => {
   if (msg.content === '!hi my names Jarvis!') {
     msg.reply('Sup bruh!');
@@ -140,7 +138,7 @@ client.on('message', message => {
 });
 
 
-// 8ball command
+// Copilot Commands //
 client.on('message', msg => {
   if (msg.content === '!8ball') {
     const responses = ['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes - definitely', 'You may rely on it', 'As I see it, yes', 'Most likely', 'Outlook good', 'Yes', 'Signs point to yes', 'Reply hazy, try again', 'Ask again later', 'Better not tell you now', 'Cannot predict now', 'Concentrate and ask again', 'Don\'t count on it', 'My reply is no', 'My sources say no', 'Outlook not so good', 'Very doubtful'];
@@ -174,9 +172,9 @@ client.on('message', msg => {
 
 
 
-// make a command that has a full code example
+// a command that has a full JS example
 client.on('message', msg => {
-  if (msg.content === '!code') {
+  if (msg.content === '!JS') {
     msg.channel.send('```js\nconsole.log("Hello, world!");\n```');
   }
 });
@@ -196,13 +194,6 @@ client.on('message', msg => {
   }
 });
 
-
-//make a command that list all commands made  
-client.on('message', msg => {
-  if (msg.content === '!commands') {
-    msg.channel.send('```js\n!8ball\n!dice\n!coin\n!hey\n!html\n!css\n!commands\n!join\n!disconnect\n!eric\n!mod-me\n!balloon\n!what is my avatar?\n```');
-  }
-});
 
 
 //make a command that hacks the server
