@@ -171,7 +171,6 @@ client.on('message', msg => {
 });
 
 
-
 // a command that has a full JS example
 client.on('message', msg => {
   if (msg.content === '!JS') {
@@ -195,7 +194,6 @@ client.on('message', msg => {
 });
 
 
-
 //make a command that hacks the server
 client.on('message', msg => {
   if (msg.content === '!hack') {
@@ -204,7 +202,7 @@ client.on('message', msg => {
 });
 
 
-// link commands
+// link commands //
 client.on('message', message => {
   if (message.content === '!creator') {
     const botInfo = new Discord.MessageEmbed()
@@ -237,7 +235,7 @@ client.on('message', message => {
   }
 });
 
-// command for the DIG images
+// command for the DIG images //
 client.on('message', async (message) => {
   if (message.content === '!meme') {
       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
@@ -310,7 +308,7 @@ client.on('message', async (message) => {
   }
 })
 
-//Discord-together youtube , poker, fishing
+//Discord-together youtube , poker, fishing //
 client.on('message', async message => {
   if (message.content === '!youtube') {
       if(message.member.voice.channel) {
