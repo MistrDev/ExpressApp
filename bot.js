@@ -96,11 +96,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === '!join') {
-    msg.channel.send('You think you are better than me Rythm? Ight bet!');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === '!disconnect') {
