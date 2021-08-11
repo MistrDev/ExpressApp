@@ -196,6 +196,19 @@ client.on('message', msg => {
   }
 });
 
+// a command that plays a game of russian roulette
+client.on('message', msg => {
+  if (msg.content === '!russian') {
+    const responses = ['1', '2', '3', '4', '5', '6'];
+    msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+  }
+});
+
+
+
+
+
+
 
 // link commands //
 client.on('message', message => {
