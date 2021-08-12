@@ -199,7 +199,7 @@ client.on('message', msg => {
 // a command that plays a game of russian roulette
 client.on('message', msg => {
   if (msg.content === '!russian') {
-    const responses = ['1', '2', '3', '4', '5', '6'];
+    const responses = ['1', '2', '3', '4', '5', 'BANG!'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
   }
 });
