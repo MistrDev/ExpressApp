@@ -207,9 +207,6 @@ client.on('message', msg => {
 
 
 
-
-
-
 // link commands //
 client.on('message', message => {
   if (message.content === '!creator') {
@@ -242,6 +239,8 @@ client.on('message', message => {
     
   }
 });
+
+
 
 // command for the DIG images //
 client.on('message', async (message) => {
@@ -315,6 +314,8 @@ client.on('message', async (message) => {
       message.channel.send(attach)
   }
 })
+
+
 
 //Discord-together youtube , poker, fishing //
 client.on('message', async message => {
