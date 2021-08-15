@@ -182,7 +182,6 @@ client.on('message', msg => {
 
 
 
-
 // a command that has a full css example  
 client.on('message', msg => {
   if (msg.content === '!css') {
