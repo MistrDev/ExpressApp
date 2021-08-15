@@ -60,12 +60,6 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '!ape') {
-    msg.reply('AMC TO THE MF MOON!');
-  }
-});
-
-client.on('message', msg => {
   if (msg.content === '!bo') {
     msg.channel.send('Bo loves jarvis and Cory, my master!');
   }
