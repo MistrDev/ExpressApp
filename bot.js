@@ -143,14 +143,6 @@ client.on('message', msg => {
   }
 });
 
-//coin command
-client.on('message', msg => {
-  if (msg.content === '!coin') {
-    const responses = ['Heads', 'Tails'];
-    msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-  }
-});
-
 
 //a command with that takes the users data and sends it to the channel
 client.on('message', msg => {
