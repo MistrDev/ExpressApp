@@ -141,15 +141,6 @@ client.on('message', msg => {
     const responses = ['1', '2', '3', '4', '5', '6'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
   }
-});
-
-
-//a command with that takes the users data and sends it to the channel
-client.on('message', msg => {
-  if (msg.content === '!Hey') {
-    msg.channel.send(`Hello, ${msg.author.username}`);
-  }
-});
 
 
 // a command that has a full JS example
