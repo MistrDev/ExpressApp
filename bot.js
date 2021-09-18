@@ -1,4 +1,4 @@
-require("dotenv").config()
+require('dotenv').config()
 
 
 
@@ -141,7 +141,7 @@ client.on('message', msg => {
   if (msg.content === '!dice') {
     const responses = ['1', '2', '3', '4', '5', '6'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
-  }
+  };
 
 
 // a command that has a full JS example
@@ -237,7 +237,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!beautiful') {
@@ -246,7 +246,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!rip') {
@@ -255,7 +255,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!trash') {
@@ -264,7 +264,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!triggered') {
@@ -273,7 +273,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!lisa') {
@@ -282,7 +282,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!invert') {
@@ -291,7 +291,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 client.on('message', async (message) => {
   if (message.content === '!AMC') {
@@ -300,7 +300,7 @@ client.on('message', async (message) => {
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
-})
+});
 
 
 
@@ -337,4 +337,4 @@ client.on('message', async message => {
 // end bot commands
 
 
-client.login(process.env.DISCORD_TOK);
+client.login(process.env.BOT_TOKEN);
