@@ -337,4 +337,4 @@ client.on('message', async message => {
 // end bot commands
 
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
