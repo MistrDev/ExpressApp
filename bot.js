@@ -151,14 +151,6 @@ client.on('message', msg => {
   }
 });
 
-//the current price of AMC ticker
-client.on('message', msg => {
-  if (msg.content === '!moon') {
-    msg.channel.send(`The current price of AMC is $100,000`);
-  }
-});
-
-
 
 // a command that has a full css example  
 client.on('message', msg => {
