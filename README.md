@@ -1,3 +1,3 @@
 # discordbot
 Discord bot made w/ node.js, discord.js
-coming back and will make a new key code and try again
+coming back and figuring out how to make it work
