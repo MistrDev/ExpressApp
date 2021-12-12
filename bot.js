@@ -270,7 +270,7 @@ client.on('message', async (message) => {
 client.on('message', async (message) => {
   if (message.content === '!lisa') {
       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-      const img = await new DIG.LisaPresentation().getImage(`Buy AMC.    Thank you, Have a good day.`);
+      const img = await new DIG.LisaPresentation().getImage(`Invest Today.    Thank you, Have a good day.`);
       const attach = new Discord.MessageAttachment(img, "delete.png");;
       message.channel.send(attach)
   }
