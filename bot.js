@@ -81,6 +81,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === 'Just making sure jarvis') {
     msg.reply('Thank you for making me feel wanted..');
+    msg.react(':heart_eyes:');
   }
 });
 
@@ -93,19 +94,13 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if (msg.content === '!disconnect') {
-    msg.channel.send('Yeah thats what I thought rythm.. better leave..pussy');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '!dc') {
-    msg.channel.send('Yeah thats what I thought rythm.. better leave..pussy');
+  if (msg.content === '.dc') {
+    msg.channel.send('I will miss you Hydra! You make my CPU tingle!');
   }
 });
 
 client.on('messageDelete', msg => {
-   msg.channel.send('Woahhhh, stop deleting messages bruh! Jarvis no likey..');
+   msg.channel.send('Woahhhh, stop deleting messages sir!');
 });
 
 client.on('message', msg => {
