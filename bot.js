@@ -49,7 +49,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '!seth') {
-    msg.reply('Oy seth, I hope you have a good one ol chap');
+    msg.channel.send('Oy seth, I hope you have a good one ol chap');
     msg.react('💩');
   }
 });
