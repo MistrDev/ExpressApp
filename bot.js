@@ -142,7 +142,7 @@ client.on('message', msg => {
     const responses = ['1', '2', '3', '4', '5', '6'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
   };
-
+});
 
 // a command that has a full JS example
 client.on('message', msg => {
@@ -329,4 +329,4 @@ client.on('message', async message => {
 // end bot commands
 
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.DISCORD_TOK);
