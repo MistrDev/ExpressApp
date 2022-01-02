@@ -20,11 +20,6 @@ client.on('ready', () => {
 });
 
 // bot commands
-client.on('message', msg => {
-  if (msg.content === '!hi my names Jarvis!') {
-    msg.reply('Sup bruh!');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === '!Thanks') {
