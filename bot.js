@@ -61,11 +61,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === '!jess') {
-    msg.reply('Bo loves jess & jarvis!');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === 'are you working jarvis?') {
