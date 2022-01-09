@@ -22,12 +22,6 @@ client.on('ready', () => {
 // bot commands
 
 client.on('message', msg => {
-  if (msg.content === '!Thanks') {
-    msg.reply('Any time sunshine!');
-  }
-});
-
-client.on('message', msg => {
   if (msg.content === '!korg') {
     const attachment = new MessageAttachment('https://media.tenor.com/images/8f9e3fa80f0e9529811ee1a732600e9a/tenor.gif');
     const attachment2 = new MessageAttachment('https://media.tenor.com/images/0e467ab6c3959ca3b0de995a6a3ad475/tenor.gif');
