@@ -200,112 +200,112 @@ client.on('message', message => {
 
 
 
-// command for the DIG images //
-// client.on('message', async (message) => {
-//   if (message.content === '!meme') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Affect().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+// command for the DIG images
+client.on('message', async (message) => {
+  if (message.content === '!meme') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Affect().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!beautiful') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Beautiful().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!beautiful') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Beautiful().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!rip') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Rip().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!rip') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Rip().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!trash') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Trash().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!trash') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Trash().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!triggered') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Triggered().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!triggered') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Triggered().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!lisa') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.LisaPresentation().getImage(`Invest Today.    Thank you, Have a good day.`);
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!lisa') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.LisaPresentation().getImage(`Invest Today.    Thank you, Have a good day.`);
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!invert') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Invert().getImage(avatar);
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!invert') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Invert().getImage(avatar);
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
-// client.on('message', async (message) => {
-//   if (message.content === '!AMC') {
-//       const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-//       const img = await new DIG.Stonk().getImage(avatar)
-//       const attach = new Discord.MessageAttachment(img, "delete.png");;
-//       message.channel.send(attach)
-//   }
-// });
+client.on('message', async (message) => {
+  if (message.content === '!AMC') {
+      const avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
+      const img = await new DIG.Stonk().getImage(avatar)
+      const attach = new Discord.MessageAttachment(img, "delete.png");;
+      message.channel.send(attach)
+  }
+});
 
 
 
 //Discord-together youtube , poker, fishing
-// client.on('message', async message => {
-//   if (message.content === '!youtube') {
-//       if(message.member.voice.channel) {
-//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
-//           return message.channel.send(`${invite.code}`);
-//       });
-//       };
-//   };
-// });
+client.on('message', async message => {
+  if (message.content === '!youtube') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
 
-// client.on('message', async message => {
-//   if (message.content === '!poker') {
-//       if(message.member.voice.channel) {
-//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
-//           return message.channel.send(`${invite.code}`);
-//       });
-//       };
-//   };
-// });
+client.on('message', async message => {
+  if (message.content === '!poker') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
 
-// client.on('message', async message => {
-//   if (message.content === '!fishing') {
-//       if(message.member.voice.channel) {
-//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
-//           return message.channel.send(`${invite.code}`);
-//       });
-//       };
-//   };
-// });
-// end bot commands
+client.on('message', async message => {
+  if (message.content === '!fishing') {
+      if(message.member.voice.channel) {
+        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
+          return message.channel.send(`${invite.code}`);
+      });
+      };
+  };
+});
+end bot commands
 
 
 client.login(process.env.DISCORD_TOK);
