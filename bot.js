@@ -305,7 +305,7 @@ client.on('message', async message => {
       };
   };
 });
-end bot commands
+//end bot commands
 
 
 client.login(process.env.DISCORD_TOK);
