@@ -275,36 +275,36 @@ client.on('message', async (message) => {
 
 
 
-//Discord-together youtube , poker, fishing //
-client.on('message', async message => {
-  if (message.content === '!youtube') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
+//Discord-together youtube , poker, fishing
+// client.on('message', async message => {
+//   if (message.content === '!youtube') {
+//       if(message.member.voice.channel) {
+//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
+//           return message.channel.send(`${invite.code}`);
+//       });
+//       };
+//   };
+// });
 
-client.on('message', async message => {
-  if (message.content === '!poker') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
+// client.on('message', async message => {
+//   if (message.content === '!poker') {
+//       if(message.member.voice.channel) {
+//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
+//           return message.channel.send(`${invite.code}`);
+//       });
+//       };
+//   };
+// });
 
-client.on('message', async message => {
-  if (message.content === '!fishing') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
+// client.on('message', async message => {
+//   if (message.content === '!fishing') {
+//       if(message.member.voice.channel) {
+//         client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
+//           return message.channel.send(`${invite.code}`);
+//       });
+//       };
+//   };
+// });
 // end bot commands
 
 
