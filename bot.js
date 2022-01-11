@@ -79,13 +79,10 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === '.dc') {
-    msg.channel.send('I will miss you Hydra! You make my CPU tingle!');
+    msg.channel.send('See ya later Hydra!');
   }
 });
 
-client.on('messageDelete', msg => {
-   msg.channel.send('Woahhhh, stop deleting messages sir!');
-});
 
 client.on('message', msg => {
   if (msg.content === 'I love jarvis') {
