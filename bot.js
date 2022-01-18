@@ -31,6 +31,13 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === '!nft') {
+    const attachment = new MessageAttachment('photos/nft.png');
+    msg.channel.send(attachment)
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === '!where is cory?') {
     msg.reply('In your moms kitchen prolly');
   }
