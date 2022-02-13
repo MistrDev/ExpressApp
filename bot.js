@@ -150,7 +150,7 @@ client.on('message', msg => {
 });
 
 
-//make a command that hacks the server
+//a command that hacks the server
 client.on('message', msg => {
   if (msg.content === '!hack') {
     msg.channel.send('```js\nconsole.log("THIS SERVER IS NOW IN CONTROL BY JARVIS");\n```');
@@ -160,8 +160,10 @@ client.on('message', msg => {
 // a command that plays a game of russian roulette
 client.on('message', msg => {
   if (msg.content === '!russian') {
+    const attachment = new MessageAttachment('https://media.giphy.com/media/cdNSp4L5vCU7aQrYnV/giphy.gif');
     const responses = ['Click', 'Click', 'Click', 'Click', 'Click', 'BANG!'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
+    msg.channel.send(attachment);
   }
 });
 
