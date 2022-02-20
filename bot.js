@@ -168,9 +168,6 @@ client.on('message', msg => {
 });
 
 
-
-
-
 // link commands //
 client.on('message', message => {
   if (message.content === '!creator') {
