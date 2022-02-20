@@ -5,7 +5,6 @@ require('dotenv').config()
 const { Client, MessageAttachment} = require('discord.js');
 const Discord = require('discord.js');
 const DIG = require("discord-image-generation");
-const { DiscordTogether } = require('discord-together');
 
 const client = new Discord.Client({
   partials: ["MESSAGE"]
@@ -14,7 +13,6 @@ const client = new Discord.Client({
 
 //node stuff
 client.setMaxListeners(Infinity);
-client.discordTogether = new DiscordTogether(client);
 client.on('ready', () => {
   console.log(`Logged in! `  + Discord.version);
 });
@@ -276,38 +274,6 @@ client.on('message', async (message) => {
   }
 });
 
-
-
-//Discord-together youtube , poker, fishing
-client.on('message', async message => {
-  if (message.content === '!youtube') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'youtube').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
-
-client.on('message', async message => {
-  if (message.content === '!poker') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'poker').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
-
-client.on('message', async message => {
-  if (message.content === '!fishing') {
-      if(message.member.voice.channel) {
-        client.discordTogether.createTogetherCode(message.member.voice.channelID, 'fishing').then(async invite => {
-          return message.channel.send(`${invite.code}`);
-      });
-      };
-  };
-});
 //end bot commands
 
 
