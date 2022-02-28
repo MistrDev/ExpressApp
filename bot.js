@@ -159,7 +159,7 @@ client.on('message', msg => {
 client.on('message', msg => {
   if (msg.content === '!russian') {
     const attachment = new MessageAttachment('https://media.giphy.com/media/cdNSp4L5vCU7aQrYnV/giphy.gif');
-    const responses = ['Click', 'Click', 'Click', 'Click', 'Click', 'BANG!'];
+    const responses = ['Click', 'Click', 'Click', 'Click', 'Click', 'BANG! , YOU DIED'];
     msg.reply(responses[Math.floor(Math.random() * responses.length)]);
     msg.channel.send(attachment);
   }
