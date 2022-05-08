@@ -23,8 +23,8 @@ client.on('message', msg => {
   if (msg.content === '!korg') {
     const attachment = new MessageAttachment('https://media.tenor.com/images/0e467ab6c3959ca3b0de995a6a3ad475/tenor.gif');
     const attachment2 = new MessageAttachment('https://media.tenor.com/images/8f9e3fa80f0e9529811ee1a732600e9a/tenor.gif');
-    msg.channel.send('Hey, hey, hey. Hey. Take it easy, man. Over here. The pile of rocks waving at you. Here. Yeah, Im actually a thing. Im a being. Allow me to introduce myself. My name is Korg. Im kind of like the leader in here. Im made of rocks, as you can see..' , attachment);
-    msg.channel.send(attachment2)
+    msg.channel.send(attachment);
+    msg.channel.send(attachment2);
   }
 });
 
